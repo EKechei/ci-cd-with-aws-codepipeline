@@ -1,0 +1,19 @@
+version: 0.2
+
+env:
+ parameter-store:
+    DOCKER_USERNAME: website-docker-credentials-username
+    DOCKER_PASSWORD: website-docker-credentials-password
+    DOCKER_URL: website-docker-registry-url
+
+phases:
+  pre_build:
+    commands:
+      - echo "Logging in to Docker..."
+      - echo "$DOCKER_PASSWORD" | docker login "$DOCKER_URL" -u "$DOCKER_USERNAME" --password-stdin
+
+  build:
+    commands:
+      - echo "Build process completed"
+      - docker build -t "$DOCKER_URL/$DOCKER_USERNAME/demo_website:latest" .
+      - docker push "$DOCKER_URL/$DOCKER_USERNAME/demo_website:latest"
