@@ -17,3 +17,9 @@ phases:
       - echo "Build process completed"
       - docker build -t "$DOCKER_URL/$DOCKER_USERNAME/demo_website:latest" .
       - docker push "$DOCKER_URL/$DOCKER_USERNAME/demo_website:latest"
+
+
+artifacts:
+  files: '**/*'
+  encryptionDisabled: false
+
