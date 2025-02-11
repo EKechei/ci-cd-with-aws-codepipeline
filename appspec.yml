@@ -3,6 +3,6 @@ os: linux
 
 hooks:
   AfterInstall:
-    - location: start_container.sh
+    - location: Scripts/start_container.sh
       timeout: 300
       runas: root
