@@ -27,11 +27,11 @@ This project sets up a **CI/CD pipeline** to automate the deployment of an appli
 
 2. **CodeBuild** compiles, packages the application, and builds a Docker image.
 
-3 **CodeBuild** pushes the Docker image to Docker Hub.
+3. **CodeBuild** pushes the Docker image to Docker Hub.
 
 4. **CodeDeploy** pulls the latest Docker image from Docker Hub and deploys it to an EC2 instance.
 
-5 **Parameter Store** is used to manage configurations.
+5. **Parameter Store** is used to manage configurations.
 
 
 # Setting Up the Pipeline
@@ -50,35 +50,35 @@ This project sets up a **CI/CD pipeline** to automate the deployment of an appli
 
 4. **Set Up CodeBuild**:
    
-- Create a new CodeBuild project in AWS.
-
-- Select GitHub as the source provider and connect to your repository.
-
-- Choose a build environment (Amazon Linux, Ubuntu, etc.).
-
-- Specify a buildspec.yml file for build instructions.
-
-- Assign the appropriate IAM role for CodeBuild.
+   - Create a new CodeBuild project in AWS.
+   
+   - Select GitHub as the source provider and connect to your repository.
+   
+   - Choose a build environment (Amazon Linux, Ubuntu, etc.).
+   
+   - Specify a buildspec.yml file for build instructions.
+   
+   - Assign the appropriate IAM role for CodeBuild.
 
 5 **Set Up Docker Hub**:
 
-- Create a repository on Docker Hub.
-
-- Store Docker credentials in AWS Parameter Store or AWS Secrets Manager.
+   - Create a repository on Docker Hub.
+   
+   - Store Docker credentials in AWS Parameter Store or AWS Secrets Manager.
 
 6 **Set Up CodeDeploy**:
 
-- Create a CodeDeploy Application.
-
-- Set up a Deployment Group linked to your EC2 instance.
+   - Create a CodeDeploy Application.
+   
+   - Set up a Deployment Group linked to your EC2 instance.
 
 7 **Set Up CodePipeline**:
 
-- Connect to GitHub as the source.
-
-- Add CodeBuild for building the application and pushing the Docker image.
-
-- Add CodeDeploy to pull and deploy the image from Docker Hub.
+   - Connect to GitHub as the source.
+   
+   - Add CodeBuild for building the application and pushing the Docker image.
+   
+   - Add CodeDeploy to pull and deploy the image from Docker Hub.
 
 
 ## Step 3: Deploy Your Application
