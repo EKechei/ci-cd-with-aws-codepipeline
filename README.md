@@ -25,7 +25,7 @@ This project sets up a **CI/CD pipeline** to automate the deployment of an appli
 
 1. **CodePipeline** starts when you push new code to GitHub.
 
-2. **CodeBuild** compiles, packages the application, and builds a Docker image.
+2. **CodeBuild** compiles, packages the application and builds a Docker image.
 
 3. **CodeBuild** pushes the Docker image to Docker Hub.
 
@@ -50,15 +50,15 @@ https://github.com/EKechei/ci-cd-with-aws-codepipeline.git
 
 4. **Set Up CodeBuild**:
    
-   - Create a new CodeBuild project in AWS.
+- Create a new CodeBuild project in AWS.
    
-   - Select GitHub as the source provider and connect to your repository.
+- Select GitHub as the source provider and connect to your repository.
    
-   - Choose a build environment (Amazon Linux, Ubuntu, etc.).
+- Choose a build environment (Amazon Linux, Ubuntu, etc.).
    
-   - Specify a buildspec.yml file for build instructions.
+- Specify a buildspec.yml file for build instructions.
    
-   - Assign the appropriate IAM role for CodeBuild.
+- Assign the appropriate IAM role for CodeBuild.
 
 5 **Set Up Docker Hub**:
 
