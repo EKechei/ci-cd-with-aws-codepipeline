@@ -62,9 +62,9 @@ https://github.com/EKechei/ci-cd-with-aws-codepipeline.git
 
 5 **Set Up Docker Hub**:
 
-      - Create a repository on Docker Hub.
-      
-      - Store Docker credentials in AWS Parameter Store or AWS Secrets Manager.
+   - Create a repository on Docker Hub.
+
+   - Store Docker credentials in AWS Parameter Store or AWS Secrets Manager.
 
 6 **Set Up CodeDeploy**:
 
